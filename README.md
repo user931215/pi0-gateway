@@ -6,7 +6,7 @@ Setup networks:
 
 /etc/network/interfaces:
 source-directory /etc/network/interfaces.d
-
+```
 allow-hotplug usb0
 iface usb0 inet static
         address 192.168.7.2 #setup host as 7.1
