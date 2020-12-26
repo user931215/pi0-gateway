@@ -4,9 +4,9 @@ Use the pi0w as advanced usb-network adapter
 Dependencies:
 Pi0w with raspberry pi os lite, usb-ethernet, ssh
 
-###Setup networks: 
+### Setup networks: 
 
-######/etc/network/interfaces:
+###### /etc/network/interfaces:
 ```
 source-directory /etc/network/interfaces.d
 
@@ -23,7 +23,7 @@ iface wlan0 inet dhcp
         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-######Setup wpa_supplicant.conf:
+###### Setup wpa_supplicant.conf:
 ```
 country=US
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -39,7 +39,7 @@ network={
 }
 ```
 
-######Setup routing
+###### Setup routing
 setup /etc/sysctl.conf
 `net.ipv4.ip_forward=1` <- uncomment this line
 
