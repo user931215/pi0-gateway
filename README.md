@@ -18,9 +18,10 @@ iface usb0 inet static
 allow-hotplug wlan0
 iface wlan0 inet dhcp
         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-
+```
 
 Setup wpa_supplicant.conf:
+```
 country=US
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
@@ -33,12 +34,13 @@ network={
     ssid="ssid2"
     psk="even smarter passphrase"
 }
-
+```
 
 setup /etc/sysctl.conf
-net.ipv4.ip_forward=1 <- uncomment this line
+`net.ipv4.ip_forward=1` <- uncomment this line
 
-setup iptables
+*****setup iptables
+```
 sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
 sudo iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 sudo iptables -A FORWARD -i usb0 -o wlan0 -j ACCEPT
