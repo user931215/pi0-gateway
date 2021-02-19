@@ -1,0 +1,4 @@
+1. install lite
+2. mount volume, touch ssh 
+3. config.txt: dtoverlay=dwc2
+4. cmdline.txt, after rootwait: modules-load=dwc2,g_ether
