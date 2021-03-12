@@ -1,2 +1,5 @@
 fix locale-issue on headless:
 edit .bashrc; export LC_ALL=C
+
+add wifi:
+sudo wpa_passphrase "SSID" "password" >> /etc/wpa_supplicant/wpa_supplicant.conf
